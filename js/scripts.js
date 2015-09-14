@@ -19,22 +19,33 @@ var kindoftriangle = function(side1, side2, side3) {
 
 
 
-//
-// $(document).ready(function() {
-//   $("form#leap-year").submit(function(event) {
-//     var year = parseInt($("input#year").val());
-//     var result = leapYear(year);
-//
-//     $(".year").text(year);
-//
-//     if(!result) {
-//       $(".not").text("not");
-//     }
-//     else {
-//       $(".not").text("");
-//     }
-//
-//     $("#result").show();
-//     event.preventDefault();
-//   });
-// });
+
+$(document).ready(function() {
+  $("form#triangle-tracker").submit(function(event) {
+    var side1= parseInt($("input#side1").val());
+    var side2= parseInt($("input#side2").val());
+    var side3= parseInt($("input#side3").val());
+    var result1 = triangletracker(side1, side2, side3);
+    var result2 = kindoftriangle(side1, side2, side3);
+
+
+
+
+    if(!result1) {
+      $(".not").text("do not") &&  $("#result1").show() && $("#result2").hide();
+    }
+    else {
+      $(".not").text("") && $(".type").text(result2) && $("#result1").show()  && $("#result2").show();
+    }
+      // $("#result1").show();
+      // $("#result2").show();
+
+  //
+  //   if(result2) {
+  //     $(".type").text(result2);
+  //   }
+  //
+  //   $("#result2").show();
+    event.preventDefault();
+  });
+});

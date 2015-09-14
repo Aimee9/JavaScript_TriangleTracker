@@ -14,18 +14,21 @@
       <form id="triangle-tracker">
         <div class="form-group">
           <label for="side1">Enter the length of the first side:</label>
-          <input id="side1" type="text">
+          <input id="side1" type="text" required=""><br>
           <label for="side2">Enter the length of the second side:</label>
-          <input id="side2" type="text">
+          <input id="side2" type="text" required=""><br>
           <label for="side3">Enter the length of the third side:</label>
-          <input id="side3" type="text">
+          <input id="side3" type="text" required=""><br>
         </div>
 
         <button type="submit" class="btn">Find out!</button>
       </form>
 
-      <div id="result">
-        <p>You <span class="not"></span> have a <span class="type"></span> triangle.</p>
+      <div id="result1">
+        <p>You <span class="not"></span> have a triangle.</p>
+      </div>
+      <div id="result2">
+        <p>It is a <span class="type"></span> triangle.</p>
       </div>
     </div>
   </body>
